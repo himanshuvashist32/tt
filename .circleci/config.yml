@@ -2,6 +2,8 @@
 # This is generic template to serve as a base for your custom config
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
+orbs:
+  node: circleci/node@5.1.0
 jobs:
   test:
     docker:
@@ -44,3 +46,4 @@ workflows:
       - deploy:
           requires:
             - test
+            - build
