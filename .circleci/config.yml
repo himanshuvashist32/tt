@@ -25,7 +25,7 @@ jobs:
           name: Build an artifact
           command: npx expo export:web
       - store_artifacts:
-          # path: example.txt
+          path: example.txt
 
   deploy:
     # This is an example deploy job, not actually used by the workflow
